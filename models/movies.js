@@ -56,7 +56,6 @@ var ironMan = new Movie({
   poster_url: "https://images-na.ssl-images-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
   imdb_url: "http://www.imdb.com/title/tt0371746/?ref_=nv_sr_1"
 });
-
 var spiritedAway = new Movie({
   name: "Spirited Away",
   genre: "Animation",
@@ -69,7 +68,6 @@ var spiritedAway = new Movie({
   poster_url: "https://images-na.ssl-images-amazon.com/images/M/MV5BNmU5OTQ0OWQtOTY0OS00Yjg4LWE1NDYtNDRhYWMxYWY4OTMwXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UY268_CR3,0,182,268_AL_.jpg",
   imdb_url: "http://www.imdb.com/title/tt0245429/?ref_=nv_sr_1"
 });
-
 // ironMan.save(function(err, ironMan){
 //   if(err){
 //     return console.error(err);
@@ -82,3 +80,13 @@ var spiritedAway = new Movie({
 //   }
 //   console.dir(spiritedAway);
 // });
+
+//Movie Requests
+
+//GET [limit] movies
+module.exports.getMovies = function(callback, limit){
+  Movie.find(callback).limit(limit);
+}
+
+//
+

@@ -24,5 +24,15 @@ app.get('/', function(req, res){
   res.send("hello world!");
 });
 
+//movie requests
+app.get('/api/movies', function(req, res){
+  Movie.getMovies(function(err, movies){
+    if(err){
+      throw err;
+    }
+    res.json(movies);
+  });
+});
+
 app.listen(3000);
 console.log("Server running on port 3000...");
