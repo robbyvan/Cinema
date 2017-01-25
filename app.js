@@ -6,6 +6,7 @@ var mongoose = require('mongoose');
 var path = require('path');
 
 //middleware
+app.use(express.static(__dirname + "/client"));
 app.use(bodyParser.json());
 
 Movie = require('./models/movies.js');

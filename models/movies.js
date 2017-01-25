@@ -1,7 +1,6 @@
 var mongoose = require('mongoose');
 
 //Movie Schema
-
 //name and description are required.
 var movieSchema = new mongoose.Schema({
   name: {
