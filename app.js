@@ -68,5 +68,16 @@ app.put('/api/movies/:_id', function(req, res){
   });
 });
 
+//DELETE: remove a movie
+app.delete('/api/movies/:_id', function(req, res){
+  var id = req.params._id;
+  Movie.removeMovie(id, function(err, movie){
+    if (err){
+      throw err;
+    }
+    res.json(movie);
+  });
+});
+
 app.listen(3000);
 console.log("Server running on port 3000...");

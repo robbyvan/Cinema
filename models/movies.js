@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 
 //Movie Schema
+
 //name and description are required.
 var movieSchema = new mongoose.Schema({
   name: {
@@ -99,7 +100,7 @@ module.exports.addMovie = function(movie, callback){
   Movie.create(movie, callback);
 }
 
-//PUT: update info
+//PUT: update a movie
 module.exports.updateMovie = function(id, movie, options, callback){
   var query = {_id: id};
   var update = {
@@ -115,4 +116,10 @@ module.exports.updateMovie = function(id, movie, options, callback){
     imdb_url: movie.imdb_url,
   };
   Movie.findOneAndUpdate(query, update, options, callback);
+}
+
+//DELETE: delete a movie
+module.exports.removeMovie = function(id, callback){
+  var query = {_id: id};
+  Movie.remove(query, callback);
 }
