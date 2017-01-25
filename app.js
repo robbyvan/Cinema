@@ -8,9 +8,16 @@ var path = require('path');
 //middleware
 app.use(bodyParser.json());
 
+Movie = require('./models/movies.js');
+
 //database connection
-mongoose.connect("mongodb://localhost/cinema");
 var db = mongoose.connection;
+db.on('error', console.error);
+db.once('open', function(){
+  console.log('Connectted to Cinema database.');
+});
+
+mongoose.connect("mongodb://localhost/cinema");
 
 //homepage
 app.get('/', function(req, res){
