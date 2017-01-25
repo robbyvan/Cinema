@@ -25,12 +25,23 @@ app.get('/', function(req, res){
 });
 
 //movie requests
+//get all movies
 app.get('/api/movies', function(req, res){
   Movie.getMovies(function(err, movies){
     if(err){
       throw err;
     }
     res.json(movies);
+  });
+});
+
+//get movie by id
+app.get('/api/movies/:_id', function(req, res){
+  Movie.getMovieById(req.params._id, function(err, movie){
+    if (err){
+      throw err;
+    }
+    res.json(movie);
   });
 });
 

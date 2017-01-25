@@ -88,5 +88,7 @@ module.exports.getMovies = function(callback, limit){
   Movie.find(callback).limit(limit);
 }
 
-//
-
+//GET a certain movie by its _id
+module.exports.getMovieById = function(id, callback){
+  Movie.findById(id, callback);
+}
