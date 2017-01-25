@@ -17,7 +17,7 @@ var movieSchema = new mongoose.Schema({
     type: String,
   },
   releaseYear: {
-    type: Number
+    type: String
   },
   description: {
     type: String,
@@ -100,19 +100,19 @@ module.exports.addMovie = function(movie, callback){
 }
 
 //PUT: update info
-// module.exports.updateMovie = function(id, movie, options, callback){
-//   var query = {_id: id};
-//   var update = {
-//     name: move.name,
-//     genre: move.genre,
-//     releaseYear: move.releaseYear,
-//     stars: move.stars,
-//     director: move.director,
-//     description: move.description,
-//     rate: move.rate,
-//     duration: move.duration,
-//     poster_url: move.poster_url,
-//     imdb_url: move.imdb_url,
-//   };
-//   Movie.findOneAndUpdate(query, update, options, callback);
-// }
+module.exports.updateMovie = function(id, movie, options, callback){
+  var query = {_id: id};
+  var update = {
+    name: movie.name,
+    genre: movie.genre,
+    releaseYear: movie.releaseYear,
+    stars: movie.stars,
+    director: movie.director,
+    description: movie.description,
+    rate: movie.rate,
+    duration: movie.duration,
+    poster_url: movie.poster_url,
+    imdb_url: movie.imdb_url,
+  };
+  Movie.findOneAndUpdate(query, update, options, callback);
+}

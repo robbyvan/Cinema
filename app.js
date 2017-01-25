@@ -56,17 +56,17 @@ app.post('/api/movies', function(req, res){
   });
 });
 
-//PUT: update movie
-// app.put('/api/movies/:_id', function(req, res){
-//   var id = req.params._id;
-//   var movie = req.body;
-//   Movie.updateMovie(id, movie, {}, function(err, movie){
-//     if (err){
-//       throw err;
-//     }
-//     res.json(movie);
-//   });
-// });
+//PUT: update a movie
+app.put('/api/movies/:_id', function(req, res){
+  var id = req.params._id;
+  var movie = req.body;
+  Movie.updateMovie(id, movie, {}, function(err, movie){
+    if (err){
+      throw err;
+    }
+    res.json(movie);
+  });
+});
 
 app.listen(3000);
 console.log("Server running on port 3000...");
