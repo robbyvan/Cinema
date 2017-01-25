@@ -25,7 +25,7 @@ app.get('/', function(req, res){
 });
 
 //movie requests
-//get all movies
+//GET: get all movies
 app.get('/api/movies', function(req, res){
   Movie.getMovies(function(err, movies){
     if(err){
@@ -35,7 +35,7 @@ app.get('/api/movies', function(req, res){
   });
 });
 
-//get movie by id
+//GET: get movie by id
 app.get('/api/movies/:_id', function(req, res){
   Movie.getMovieById(req.params._id, function(err, movie){
     if (err){
@@ -44,6 +44,29 @@ app.get('/api/movies/:_id', function(req, res){
     res.json(movie);
   });
 });
+
+//POST: add a new movie
+app.post('/api/movies', function(req, res){
+  var movie = req.body;
+  Movie.addMovie(movie, function(err, movie){
+    if(err){
+      throw err;
+    }
+    res.json(movie);
+  });
+});
+
+//PUT: update movie
+// app.put('/api/movies/:_id', function(req, res){
+//   var id = req.params._id;
+//   var movie = req.body;
+//   Movie.updateMovie(id, movie, {}, function(err, movie){
+//     if (err){
+//       throw err;
+//     }
+//     res.json(movie);
+//   });
+// });
 
 app.listen(3000);
 console.log("Server running on port 3000...");

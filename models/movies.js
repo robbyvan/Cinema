@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 
 //Movie Schema
+//name and description are required.
 var movieSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -83,12 +84,35 @@ var spiritedAway = new Movie({
 
 //Movie Requests
 
-//GET [limit] movies
+//GET: get [limit] movies
 module.exports.getMovies = function(callback, limit){
   Movie.find(callback).limit(limit);
 }
 
-//GET a certain movie by its _id
+//GET: get a certain movie by its _id
 module.exports.getMovieById = function(id, callback){
   Movie.findById(id, callback);
 }
+
+//POST: add a new movie
+module.exports.addMovie = function(movie, callback){
+  Movie.create(movie, callback);
+}
+
+//PUT: update info
+// module.exports.updateMovie = function(id, movie, options, callback){
+//   var query = {_id: id};
+//   var update = {
+//     name: move.name,
+//     genre: move.genre,
+//     releaseYear: move.releaseYear,
+//     stars: move.stars,
+//     director: move.director,
+//     description: move.description,
+//     rate: move.rate,
+//     duration: move.duration,
+//     poster_url: move.poster_url,
+//     imdb_url: move.imdb_url,
+//   };
+//   Movie.findOneAndUpdate(query, update, options, callback);
+// }
