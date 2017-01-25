@@ -46,6 +46,7 @@ module.exports = Movie;
 //default displays
 var ironMan = new Movie({
   name: "Iron Man",
+  genre: "Action",
   releaseYear: "2008",
   stars: "Robert Downey Jr., Gwyneth Paltrow, Terrence Howard",
   director: "Jon Favreau",
@@ -56,9 +57,28 @@ var ironMan = new Movie({
   imdb_url: "http://www.imdb.com/title/tt0371746/?ref_=nv_sr_1"
 });
 
-ironMan.save(function(err, ironMan){
-  if(err){
-    return console.error(err);
-  }
-  console.dir(ironMan);
+var spiritedAway = new Movie({
+  name: "Spirited Away",
+  genre: "Animation",
+  releaseYear: "2001",
+  stars: " Daveigh Chase, Suzanne Pleshette, Miyu Irino",
+  director: "Hayao Miyazaki",
+  description: "During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.",
+  rate: "8.6/10",
+  duration: "2h 5min",
+  poster_url: "https://images-na.ssl-images-amazon.com/images/M/MV5BNmU5OTQ0OWQtOTY0OS00Yjg4LWE1NDYtNDRhYWMxYWY4OTMwXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UY268_CR3,0,182,268_AL_.jpg",
+  imdb_url: "http://www.imdb.com/title/tt0245429/?ref_=nv_sr_1"
 });
+
+// ironMan.save(function(err, ironMan){
+//   if(err){
+//     return console.error(err);
+//   }
+//   console.dir(ironMan);
+// });
+// spiritedAway.save(function(err, spiritedAway){
+//   if(err){
+//     return console.error(err);
+//   }
+//   console.dir(spiritedAway);
+// });
