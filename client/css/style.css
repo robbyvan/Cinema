@@ -2,3 +2,30 @@
   text-align: center;
   color: #3e3e3e;
 }
+img{
+  width: 100%;
+}
+.info-box{
+  height: 300px;
+}
+.bio{
+  height: 380px;
+  margin-top: 20px;
+  border: 1px solid #e3e3e3;
+  padding: 20px;
+}
+.bio h3{
+  height: 40px;
+}
+.bio h4{
+  height: 20px;
+}
+.bio p{
+  height: 300px;
+}
+.more-info{
+  position: absolute;
+  display: block;
+  bottom: 20px;
+  right: 40px;
+}

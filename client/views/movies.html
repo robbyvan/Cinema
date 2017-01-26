@@ -1,1 +1,20 @@
-<h1>Movies View</h1>
+<div class="row" ng-controller="MovieController" ng-init="getMovies()">
+
+  <div class="col-md-12">
+    <div class="col-md-6" ng-repeat="movie in movies">
+      <div class="col-md-12 bio">
+      <div class="col-md-6">
+          <h4>{{movie.name}}</h4>
+          <h3>Rate: {{movie.rate}}</h3>
+          <h4>{{movie.genre}}</h4>
+          <p>{{movie.description}}</p>
+      </div>
+      <a class="btn btn-primary more-info" href="#!/movies/details/{{movie._id}}">View Details</a>
+        <div class="col-md-6">
+            <img class="thumbnail" src="{{movie.poster_url}}">
+        </div>
+      </div>
+      </div>
+    </div>
+
+  </div>
