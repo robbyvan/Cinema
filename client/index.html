@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
   <title>Robby's Cinema</title>
   <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="css/style.css" />
-  
+
   <script type="text/javascript" src="/bower_components/jquery/dist/jquery.js"></script>
   <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
   <script type="text/javascript" src="/bower_components/angular-route/angular-route.js"></script>
@@ -12,7 +12,34 @@
   <script type="text/javascript" src="/myApp.js"></script>
   <script type="text/javascript" src="/controllers/movies.js"></script>
 </head>
+
 <body>
-  <p>Hi!</p>
+  <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Cinema</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#!/books/add">Add Favorites</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div id="movie-box" class="container">
+      <h1>Welcome to Robby's Cinema</h1>  
+      <div class="col-md-12">
+        <div ng-view></div>
+      </div>
+
+    </div><!-- /.container -->
 </body>
+
 </html>
