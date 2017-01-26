@@ -17,7 +17,7 @@ myApp.config(function($routeProvider){
     controller: 'MovieController',
     templateUrl: 'views/add_movie.html'
   })
-  .when('/movies/edit', {
+  .when('/movies/edit/:id', {
     controller: 'MovieController',
     templateUrl: 'views/edit_movie.html'
   })

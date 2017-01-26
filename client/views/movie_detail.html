@@ -1,1 +1,31 @@
-<h1>Movie Detail</h1>
+<a href="#!/movies">&lt; Back</a>
+<div class="panel panel-default" ng-init="getMovie()">
+
+  <div class="panel-heading">
+    <h3 class="panel-title">{{movie.name}}</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="{{movie.poster_url}}">
+      </div>
+      <div class="col-md-8">
+        <ul class="list-group">
+          <li class="list-group-item">{{movie.description}}</li>
+          <li class="list-group-item">Stars: {{movie.stars}}</li>
+          <li class="list-group-item">Rate: {{movie.rate}}</li>
+          <li class="list-group-item">Genre: {{movie.genre}}</li>
+          <li class="list-group-item">Release year: {{movie.releaseYear}}</li>
+        </ul>
+
+        <a href="{{movie.imdb_url}}" class="btn btn-primary">View more on IMDB</a>
+      </div>
+    </div>
+
+    <div>
+      <a href="#!/movies/edit/{{movie._id}}" class="btn btn-primary">Edit</a>
+      <a ng-click="removeMovie()" class="btn btn-primary">Remove</a>
+    </div>
+    
+  </div>
+</div>
