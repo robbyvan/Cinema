@@ -4,7 +4,7 @@ A simple app using AngularJS + express.js + mongodb
 ===
 
 ## Installing npm and mongodb
-Note: If you are running this app for the first time, if running the app for the first time, need to initialize the database. 
+Note: If you are running this app for the first time, you need to initialize the database. 
 More details see './model/movies.js'
 ## Running server on port 3000
 ![](./img/server.png)
