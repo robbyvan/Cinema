@@ -3,7 +3,9 @@ A simple app using AngularJS + express.js + mongodb
 
 ## REST API
 ```localhost:3000/api/movies``` The server will respond with all movies in database in JSON
+![](./img/api1.png)
 ```localhost:3000/api/movies/xxxxx``` 'xxxxx' is the _id of a certain movie, the server will respond with movie with this id.
+![](./img/api2.png)
 
 ## Installing npm and mongodb
 Note: If you are running this app for the first time, you need to initialize the database. 
