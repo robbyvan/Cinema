@@ -19,13 +19,12 @@
         </ul>
 
         <a href="{{movie.imdb_url}}" class="btn btn-primary">View more on IMDB</a>
+        <br /><br />
+        <a href="#!/movies/edit/{{movie._id}}" class="btn btn-primary">Edit</a>
+        <a ng-click="removeMovie()" class="btn btn-primary">Remove</a>
       </div>
     </div>
 
-    <div>
-      <a href="#!/movies/edit/{{movie._id}}" class="btn btn-primary">Edit</a>
-      <a ng-click="removeMovie()" class="btn btn-primary">Remove</a>
-    </div>
     
   </div>
 </div>

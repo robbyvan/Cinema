@@ -69,18 +69,25 @@ var spiritedAway = new Movie({
   poster_url: "https://images-na.ssl-images-amazon.com/images/M/MV5BNmU5OTQ0OWQtOTY0OS00Yjg4LWE1NDYtNDRhYWMxYWY4OTMwXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UY268_CR3,0,182,268_AL_.jpg",
   imdb_url: "http://www.imdb.com/title/tt0245429/?ref_=nv_sr_1"
 });
-// ironMan.save(function(err, ironMan){
-//   if(err){
-//     return console.error(err);
-//   }
-//   console.dir(ironMan);
-// });
-// spiritedAway.save(function(err, spiritedAway){
-//   if(err){
-//     return console.error(err);
-//   }
-//   console.dir(spiritedAway);
-// });
+
+/* 
+
+//If you are running this app for the first time, plese uncomment the following code to initialize your database.
+
+ironMan.save(function(err, ironMan){
+  if(err){
+    return console.error(err);
+  }
+  console.dir(ironMan);
+});
+spiritedAway.save(function(err, spiritedAway){
+  if(err){
+    return console.error(err);
+  }
+  console.dir(spiritedAway);
+});
+
+*/
 
 //Movie Requests
 
