@@ -14,12 +14,13 @@ Note: If you are running this app for the first time, you need to initialize the
 More details plese see './model/movies.js'
 
 ## Running server on port 3000
-![](./img/server.png)
 After installing npm and mongodb, open terminal and type
 ```
 node install
 node app
 ```
+![](./img/server.png)
+
 
 ## Homepage
 Then open the browser and type 'localhost:3000' to visit homepage.
