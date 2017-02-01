@@ -16,7 +16,7 @@ More details plese see './model/movies.js'
 ## Running server on port 3000
 After installing npm and mongodb, open terminal and type
 ```
-node install
+npm install
 node app
 ```
 ![](./img/server.png)
