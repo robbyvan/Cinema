@@ -5,7 +5,7 @@ A simple app using AngularJS + express.js + mongodb
 ```localhost:3000/api/movies``` The server will respond with all movies in database in JSON
 
 ![](./img/api1.png)
-```localhost:3000/api/movies/xxxxx``` 'xxxxx' is the _id of a certain movie, the server will respond with movie with this id.
+```localhost:3000/api/movies/xxxxx``` 'xxxxx' is the _id of a certain movie, the server will respond with movie whose id is 'xxxxx'
 
 ![](./img/api2.png)
 
